@@ -1,0 +1,12 @@
+{
+  "name": "indian-cg-news",
+  "version": "1.0.0",
+  "description": "Indian CG News Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

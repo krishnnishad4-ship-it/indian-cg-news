@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Business News - NEWS INDIA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+header{
+    background:#d60000;
+    color:white;
+    padding:15px 5%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    text-decoration:none;
+    color:white;
+}
+
+nav{
+    margin-top:12px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.breaking{
+    background:#222;
+    color:white;
+    padding:10px 5%;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:25px auto;
+}
+
+.page-title{
+    background:white;
+    padding:20px;
+    border-left:6px solid #d60000;
+    margin-bottom:20px;
+}
+
+.page-title h1{
+    color:#d60000;
+    margin-bottom:8px;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    text-decoration:none;
+    color:#222;
+    box-shadow:0 2px 8px rgba(0,0,0,0.12);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.category{
+    color:#d60000;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.card h2{
+    font-size:20px;
+    margin:8px 0;
+}
+
+.date{
+    color:#777;
+    font-size:13px;
+}
+
+footer{
+    margin-top:40px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:700px){
+    .news-grid{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    .card img{
+        height:200px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">📰 NEWS INDIA</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="india.html">India</a>
+<a href="world.html">World</a>
+<a href="sports.html">Sports</a>
+<a href="business.html">Business</a>
+<a href="entertainment.html">Entertainment</a>
+</nav>
+
+</header>
+
+<div class="breaking">
+🔴 BREAKING NEWS: बिजनेस और बाजार की बड़ी खबरें यहां पढ़ें
+</div>
+
+<div class="container">
+
+<div class="page-title">
+<h1>💰 Business News</h1>
+<p>बिजनेस, शेयर बाजार और अर्थव्यवस्था से जुड़ी खबरें</p>
+</div>
+
+<div class="news-grid">
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">STOCK MARKET</div>
+<h2>शेयर बाजार से जुड़ी महत्वपूर्ण अपडेट</h2>
+<p class="date">आज | Business News</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">BUSINESS</div>
+<h2>बिजनेस जगत की बड़ी खबर</h2>
+<p class="date">आज | Business News</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">ECONOMY</div>
+<h2>अर्थव्यवस्था से जुड़ी नई जानकारी</h2>
+<p class="date">आज | Business News</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">FINANCE</div>
+<h2>फाइनेंस और पैसों से जुड़ी खबर</h2>
+<p class="date">आज | Business News</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">MARKET</div>
+<h2>बाजार की प्रमुख खबरें और अपडेट</h2>
+<p class="date">आज | Business News</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">BUSINESS</div>
+<h2>कंपनियों और कारोबार से जुड़ी खबर</h2>
+<p class="date">आज | Business News</p>
+</div>
+</a>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 NEWS INDIA | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Entertainment News - NEWS INDIA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+header{
+    background:#d60000;
+    color:white;
+    padding:15px 5%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    text-decoration:none;
+    color:white;
+}
+
+nav{
+    margin-top:12px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.breaking{
+    background:#222;
+    color:white;
+    padding:10px 5%;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:25px auto;
+}
+
+.page-title{
+    background:white;
+    padding:20px;
+    border-left:6px solid #d60000;
+    margin-bottom:20px;
+}
+
+.page-title h1{
+    color:#d60000;
+    margin-bottom:8px;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    text-decoration:none;
+    color:#222;
+    box-shadow:0 2px 8px rgba(0,0,0,0.12);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.category{
+    color:#d60000;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.card h2{
+    font-size:20px;
+    margin:8px 0;
+}
+
+.date{
+    color:#777;
+    font-size:13px;
+}
+
+footer{
+    margin-top:40px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:700px){
+    .news-grid{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    .card img{
+        height:200px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">📰 NEWS INDIA</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="india.html">India</a>
+<a href="world.html">World</a>
+<a href="sports.html">Sports</a>
+<a href="business.html">Business</a>
+<a href="entertainment.html">Entertainment</a>
+</nav>
+
+</header>
+
+<div class="breaking">
+🔴 BREAKING NEWS: मनोरंजन जगत की बड़ी खबरें यहां पढ़ें
+</div>
+
+<div class="container">
+
+<div class="page-title">
+<h1>🎬 Entertainment News</h1>
+<p>फिल्म, टीवी, वेब सीरीज और मनोरंजन जगत की खबरें</p>
+</div>
+
+<div class="news-grid">
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">BOLLYWOOD</div>
+<h2>फिल्म जगत से जुड़ी महत्वपूर्ण खबर</h2>
+<p class="date">आज | Entertainment</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">MOVIES</div>
+<h2>नई फिल्म से जुड़ी बड़ी जानकारी</h2>
+<p class="date">आज | Entertainment</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">WEB SERIES</div>
+<h2>वेब सीरीज की नई अपडेट</h2>
+<p class="date">आज | Entertainment</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">CINEMA</div>
+<h2>सिनेमा जगत की प्रमुख खबरें</h2>
+<p class="date">आज | Entertainment</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">TV</div>
+<h2>टीवी और कलाकारों से जुड़ी खबर</h2>
+<p class="date">आज | Entertainment</p>
+</div>
+</a>
+
+<a href="news.html" class="card">
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<div class="category">MUSIC</div>
+<h2>म्यूजिक और मनोरंजन की नई खबर</h2>
+<p class="date">आज | Entertainment</p>
+</div>
+</a>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 NEWS INDIA | All Rights Reserved</p>
+</footer>
+
+</body>

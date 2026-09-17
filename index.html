@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INDIAN CG NEWS - India & Chhattisgarh News</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        <a href="index.html">🇮🇳 INDIAN CG NEWS</a>
+    </div>
+
+    <div class="tagline">
+        India • Chhattisgarh • World • Sports • Business • Entertainment
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="india.html">India</a>
+        <a href="world.html">World</a>
+        <a href="sports.html">Sports</a>
+        <a href="business.html">Business</a>
+        <a href="entertainment.html">Entertainment</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search News..."
+    >
+
+    <button onclick="searchNews()">Search</button>
+
+</div>
+
+<div id="searchResult"></div>
+
+
+<!-- ================= SEARCH RESULTS ================= -->
+
+<section id="searchSection" style="display:none;">
+
+    <h2 class="section-title">
+        🔎 Search Results
+    </h2>
+
+    <div id="searchGrid"></div>
+
+</section>
+
+
+<!-- ================= BREAKING ================= -->
+
+<div class="breaking">
+
+    <strong>🔴 BREAKING</strong>
+
+    देश और दुनिया की ताजा खबरें •
+    Chhattisgarh News •
+    India News •
+    Latest Updates
+
+</div>
+
+
+<!-- ================= HOME ================= -->
+
+<main class="container">
+
+
+    <!-- ================= TOP NEWS ================= -->
+
+    <section class="top-news-layout">
+
+        <a href="news.html" class="main-news">
+
+            <img
+                src="https://images.unsplash.com/photo-1504711434969-e33886168f5c"
+                alt="Latest News"
+            >
+
+            <div class="main-content">
+
+                <span class="news-label">
+                    🔥 TOP NEWS
+                </span>
+
+                <h1>
+                    आज की बड़ी खबरें — Latest News
+                </h1>
+
+                <p>
+                    भारत और छत्तीसगढ़ समेत देश-दुनिया की
+                    महत्वपूर्ण खबरें एक ही जगह पढ़ें।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <div class="side-news">
+
+
+            <a href="india.html" class="side-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620"
+                    alt="India News"
+                >
+
+                <div>
+
+                    <span>🇮🇳 INDIA</span>
+
+                    <h3>
+                        भारत की बड़ी खबरें और ताजा अपडेट
+                    </h3>
+
+                </div>
+
+            </a>
+
+
+            <a href="india.html" class="side-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1504711434969-e33886168f5c"
+                    alt="National News"
+                >
+
+                <div>
+
+                    <span>📰 NATIONAL</span>
+
+                    <h3>
+                        देशभर की महत्वपूर्ण खबरें
+                    </h3>
+
+                </div>
+
+            </a>
+
+
+            <a href="world.html" class="side-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2"
+                    alt="World News"
+                >
+
+                <div>
+
+                    <span>🌍 WORLD</span>
+
+                    <h3>
+                        दुनिया की बड़ी खबरों पर नजर
+                    </h3>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LIVE CRICKET ================= -->
+
+    <section class="live-cricket">
+
+        <div class="live-title">
+
+            🏏 LIVE CRICKET
+
+            <span>🔴 LIVE</span>
+
+        </div>
+
+
+        <div class="match">
+
+            <div class="teams">
+
+                <strong>🇮🇳 India</strong>
+
+                <strong>🇦🇺 Australia</strong>
+
+            </div>
+
+            <div class="score">
+                IND 187/3
+            </div>
+
+            <div class="overs">
+                18.4 Overs
+            </div>
+
+            <div class="status">
+                India batting
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TRENDING ================= -->
+
+    <h2 class="section-title">
+        🔥 Trending News
+    </h2>
+
+    <div class="news-grid">
+
+
+        <a href="india.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620"
+                alt="India"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🇮🇳 INDIA</span>
+
+                <h2>
+                    भारत की आज की प्रमुख खबर
+                </h2>
+
+                <p>
+                    देश से जुड़ी महत्वपूर्ण जानकारी और ताजा अपडेट।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="india.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1504711434969-e33886168f5c"
+                alt="National News"
+            >
+
+            <div class="card-content">
+
+                <span class="category">📰 NATIONAL</span>
+
+                <h2>
+                    देश की बड़ी खबरें
+                </h2>
+
+                <p>
+                    भारत के अलग-अलग हिस्सों से महत्वपूर्ण समाचार।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="sports.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211"
+                alt="Sports"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🏏 SPORTS</span>
+
+                <h2>
+                    Sports की Latest News
+                </h2>
+
+                <p>
+                    खेल जगत की ताजा खबरें और महत्वपूर्ण अपडेट।
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- ================= CHHATTISGARH ================= -->
+
+    <h2 class="section-title">
+        🏠 Chhattisgarh News
+    </h2>
+
+    <div class="news-grid">
+
+
+        <a href="news.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1504711434969-e33886168f5c"
+                alt="Chhattisgarh News"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🏠 CG NEWS</span>
+
+                <h2>
+                    छत्तीसगढ़ की आज की बड़ी खबर
+                </h2>
+
+                <p>
+                    रायपुर, बिलासपुर, दुर्ग, रायगढ़ और प्रदेशभर की खबरें।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="news.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2"
+                alt="CG Update"
+            >
+
+            <div class="card-content">
+
+                <span class="category">📍 CHHATTISGARH</span>
+
+                <h2>
+                    छत्तीसगढ़ Latest Update
+                </h2>
+
+                <p>
+                    प्रदेश से जुड़ी महत्वपूर्ण खबरों और अपडेट यहां पढ़ें।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="news.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620"
+                alt="Local News"
+            >
+
+            <div class="card-content">
+
+                <span class="category">📍 LOCAL NEWS</span>
+
+                <h2>
+                    शहर और जिले की ताजा खबरें
+                </h2>
+
+                <p>
+                    स्थानीय स्तर की महत्वपूर्ण खबरें एक जगह।
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- ================= INDIA ================= -->
+
+    <h2 class="section-title">
+        🇮🇳 India News
+    </h2>
+
+    <div class="news-grid">
+
+
+        <a href="india.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620"
+                alt="India News"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🇮🇳 INDIA</span>
+
+                <h2>
+                    भारत की बड़ी खबरें
+                </h2>
+
+                <p>
+                    देश की महत्वपूर्ण खबरों और ताजा अपडेट यहां पढ़ें।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="india.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1504711434969-e33886168f5c"
+                alt="National News"
+            >
+
+            <div class="card-content">
+
+                <span class="category">📰 NATIONAL</span>
+
+                <h2>
+                    देश की ताजा खबर
+                </h2>
+
+                <p>
+                    भारत से जुड़ी नई और महत्वपूर्ण जानकारी।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="india.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2"
+                alt="India Update"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🔥 UPDATE</span>
+
+                <h2>
+                    आज का बड़ा अपडेट
+                </h2>
+
+                <p>
+                    देशभर की प्रमुख खबरों का अपडेट।
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- ================= WORLD ================= -->
+
+    <h2 class="section-title">
+        🌍 World News
+    </h2>
+
+    <div class="news-grid">
+
+
+        <a href="world.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2"
+                alt="World News"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🌍 WORLD</span>
+
+                <h2>
+                    दुनिया की बड़ी खबरें
+                </h2>
+
+                <p>
+                    World की महत्वपूर्ण खबरें और ताजा अपडेट।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="world.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1504711434969-e33886168f5c"
+                alt="International News"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🌎 INTERNATIONAL</span>
+
+                <h2>
+                    International News
+                </h2>
+
+                <p>
+                    दुनिया भर से महत्वपूर्ण समाचार।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="world.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620"
+                alt="Global News"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🌐 GLOBAL</span>
+
+                <h2>
+                    Global Update
+                </h2>
+
+                <p>
+                    अंतरराष्ट्रीय घटनाओं की जानकारी।
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- ================= SPORTS ================= -->
+
+    <h2 class="section-title">
+        🏏 Sports News
+    </h2>
+
+    <div class="news-grid">
+
+
+        <a href="sports.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211"
+                alt="Cricket"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🏏 CRICKET</span>
+
+                <h2>
+                    क्रिकेट की बड़ी खबरें
+                </h2>
+
+                <p>
+                    मैच, खिलाड़ी और क्रिकेट जगत की ताजा जानकारी।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="sports.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211"
+                alt="Sports"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🏆 SPORTS</span>
+
+                <h2>
+                    खेल जगत का Latest Update
+                </h2>
+
+                <p>
+                    देश और दुनिया के खेलों की महत्वपूर्ण खबरें।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="sports.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211"
+                alt="Match"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🔴 LIVE UPDATE</span>
+
+                <h2>
+                    आज के मैच की खबर
+                </h2>
+
+                <p>
+                    मैच से जुड़े ताजा अपडेट और जानकारी।
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- ================= BUSINESS ================= -->
+
+    <h2 class="section-title">
+        💼 Business News
+    </h2>
+
+    <div class="news-grid">
+
+
+        <a href="business.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e"
+                alt="Business"
+            >
+
+            <div class="card-content">
+
+                <span class="category">💼 BUSINESS</span>
+
+                <h2>
+                    Business की बड़ी खबर
+                </h2>
+
+                <p>
+                    बिजनेस और बाजार से जुड़े ताजा अपडेट।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="business.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1559526324-593bc073d938"
+                alt="Market"
+            >
+
+            <div class="card-content">
+
+                <span class="category">📈 MARKET</span>
+
+                <h2>
+                    Market Update
+                </h2>
+
+                <p>
+                    शेयर बाजार और अर्थव्यवस्था की खबरें।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="business.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
+                alt="Economy"
+            >
+
+            <div class="card-content">
+
+                <span class="category">💰 ECONOMY</span>
+
+                <h2>
+                    Economy News
+                </h2>
+
+                <p>
+                    अर्थव्यवस्था से जुड़ी महत्वपूर्ण जानकारी।
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- ================= ENTERTAINMENT ================= -->
+
+    <h2 class="section-title">
+        🎬 Entertainment News
+    </h2>
+
+    <div class="news-grid">
+
+
+        <a href="entertainment.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba"
+                alt="Entertainment"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🎬 ENTERTAINMENT</span>
+
+                <h2>
+                    Entertainment की खबरें
+                </h2>
+
+                <p>
+                    फिल्म, टीवी और मनोरंजन की ताजा खबरें।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="entertainment.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81"
+                alt="Bollywood"
+            >
+
+            <div class="card-content">
+
+                <span class="category">⭐ BOLLYWOOD</span>
+
+                <h2>
+                    Bollywood Update
+                </h2>
+
+                <p>
+                    मनोरंजन जगत की नई जानकारी।
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="entertainment.html" class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819"
+                alt="Entertainment"
+            >
+
+            <div class="card-content">
+
+                <span class="category">🎥 LATEST</span>
+
+                <h2>
+                    Latest Entertainment
+                </h2>
+
+                <p>
+                    मनोरंजन की ताजा खबरें पढ़ें।
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- ================= QUICK UPDATES ================= -->
+
+    <h2 class="section-title">
+        ⚡ Quick Updates
+    </h2>
+
+    <div class="quick-news">
+
+        <a href="india.html">
+            🇮🇳 India News — देशभर की ताजा खबरें
+        </a>
+
+        <a href="news.html">
+            🏠 CG News — छत्तीसगढ़ की महत्वपूर्ण खबरें
+        </a>
+
+        <a href="sports.html">
+            🏏 Sports — आज के मैच और खेल अपडेट
+        </a>
+
+        <a href="business.html">
+            📈 Business — Market और Economy News
+        </a>
+
+        <a href="world.html">
+            🌍 World — दुनिया की बड़ी खबरें
+        </a>
+
+        <a href="entertainment.html">
+            🎬 Entertainment — Bollywood और मनोरंजन
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <strong>🇮🇳 INDIAN CG NEWS</strong>
+
+    <br><br>
+
+    India • Chhattisgarh • World • Sports • Business • Entertainment
+
+    <br><br>
+
+    © 2026 INDIAN CG NEWS
+
+    <br><br>
+
+    All Rights Reserved
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

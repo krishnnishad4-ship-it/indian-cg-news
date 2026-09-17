@@ -1,0 +1,388 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+/* HEADER */
+
+header {
+    background: #111827;
+    color: white;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.tagline {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+nav {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background: #374151;
+    padding: 8px 13px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #e11d48;
+}
+
+/* SEARCH */
+
+.search-box {
+    background: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-box input {
+    width: 500px;
+    max-width: 75%;
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.search-box button {
+    padding: 11px 18px;
+    border: none;
+    background: #e11d48;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* SEARCH RESULT */
+
+#searchResult {
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+}
+
+#searchSection {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 15px 25px;
+}
+
+#searchGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* BREAKING */
+
+.breaking {
+    background: #b91c1c;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+}
+
+/* TOP NEWS */
+
+.top-news-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.main-news {
+    display: block;
+    background: white;
+    color: #222;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.main-news img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.main-content {
+    padding: 15px;
+}
+
+.news-label {
+    color: #e11d48;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.main-content h1 {
+    font-size: 26px;
+    margin: 8px 0;
+}
+
+.main-content p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* SIDE NEWS */
+
+.side-news {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.side-card {
+    display: flex;
+    background: white;
+    color: #222;
+    text-decoration: none;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    min-height: 92px;
+}
+
+.side-card img {
+    width: 115px;
+    height: 92px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.side-card div {
+    padding: 10px;
+}
+
+.side-card span {
+    font-size: 11px;
+    color: #e11d48;
+    font-weight: bold;
+}
+
+.side-card h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    line-height: 1.3;
+}
+
+/* LIVE CRICKET */
+
+.live-cricket {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+}
+
+.live-title {
+    background: #111827;
+    color: white;
+    padding: 12px 15px;
+    font-weight: bold;
+}
+
+.live-title span {
+    float: right;
+    color: #ff4d4d;
+}
+
+.match {
+    padding: 15px;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+}
+
+.score {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.overs {
+    color: #666;
+    margin-top: 4px;
+}
+
+.status {
+    color: #e11d48;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* SECTION TITLE */
+
+.section-title {
+    font-size: 23px;
+    margin: 25px 0 12px;
+    border-left: 5px solid #e11d48;
+    padding-left: 10px;
+}
+
+/* NEWS GRID */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* CARD */
+
+.card {
+    display: block;
+    background: white;
+    color: #222;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.category {
+    color: #e11d48;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 7px 0;
+    line-height: 1.3;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* QUICK NEWS */
+
+.quick-news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.quick-news a {
+    background: white;
+    padding: 13px;
+    color: #222;
+    text-decoration: none;
+    border-left: 4px solid #e11d48;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 30px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .logo a {
+        font-size: 22px;
+    }
+
+    .top-news-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .main-news img {
+        height: 210px;
+    }
+
+    .news-grid,
+    #searchGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-news {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 190px;
+    }
+
+    .main-content h1 {
+        font-size: 21px;
+    }
+
+    .search-box input {
+        max-width: 70%;
+    }
+}
