@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+}
+
+.login-box{
+    width:90%;
+    max-width:400px;
+    margin:100px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+input{
+    width:90%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    width:95%;
+    padding:12px;
+    background:#d00000;
+    color:white;
+    border:0;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#dashboardArea{
+    display:none;
+    padding:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.stat{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.stat h2{
+    margin:5px 0;
+    color:#d00000;
+}
+
+table{
+    width:100%;
+    margin-top:25px;
+    background:white;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:left;
+}
+
+th{
+    background:#111;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box" id="loginBox">
+
+    <h1>🔐 Admin Login</h1>
+
+    <input
+        type="password"
+        id="adminPassword"
+        placeholder="Admin Password"
+    >
+
+    <button onclick="adminLogin()">
+        Login
+    </button>
+
+    <p id="loginMessage"></p>
+
+</div>
+
+
+<div id="dashboardArea">
+
+    <h1>📊 INDIAN CG NEWS</h1>
+    <h2>Admin Dashboard</h2>
+
+    <div class="cards">
+
+        <div class="stat">
+            <p>Total Visits</p>
+            <h2 id="totalVisits">0</h2>
+        </div>
+
+        <div class="stat">
+            <p>Today's Visits</p>
+            <h2 id="todayVisits">0</h2>
+        </div>
+
+    </div>
+
+    <h2>Recent Visits</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Page</th>
+                <th>Session</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+
+        <tbody id="visitTable">
+        </tbody>
+
+    </table>
+
+</div>
+
+
+<script>
+
+async function adminLogin(){
+
+    const password =
+        document.getElementById("adminPassword").value;
+
+    const message =
+        document.getElementById("loginMessage");
+
+    if(!password){
+
+        message.textContent =
+            "⚠️ Password enter karo";
+
+        return;
+    }
+
+    try{
+
+        const response =
+            await fetch("/api/admin-login",{
+
+                method:"POST",
+
+                headers:{
+                    "Content-Type":"application/json"
+                },
+
+                body:JSON.stringify({
+                    password:password
+                })
+
+            });
+
+        const result =
+            await response.json();
+
+        if(result.success){
+
+            message.textContent =
+                "✅ Login successful";
+
+            document.getElementById("loginBox")
+                .style.display="none";
+
+            document.getElementById("dashboardArea")
+                .style.display="block";
+
+            loadAdminData();
+
+        }else{
+
+            message.textContent =
+                "❌ Wrong password";
+
+        }
+
+    }catch(error){
+
+        console.log(error);
+
+        message.textContent =
+            "❌ Login error";
+
+    }
+
+}
+
+
+async function loadAdminData(){
+
+    try{
+
+        const password =
+            document.getElementById("adminPassword").value;
+
+        const response =
+            await fetch("/api/admin-data",{
+
+                headers:{
+                    "x-admin-password":password
+                }
+
+            });
+
+        const data =
+            await response.json();
+
+        if(!response.ok){
+
+            alert("Admin data load nahi hui");
+
+            return;
+        }
+
+        const visits =
+            data.visits || [];
+
+        document.getElementById("totalVisits")
+            .textContent=visits.length;
+
+
+        const today =
+            new Date().toDateString();
+
+        const todayCount =
+            visits.filter(function(v){
+
+                return new Date(v.visited_at)
+                    .toDateString() === today;
+
+            }).length;
+
+        document.getElementById("todayVisits")
+            .textContent=todayCount;
+
+
+        const table =
+            document.getElementById("visitTable");
+
+        table.innerHTML="";
+
+
+        visits.slice(0,50).forEach(function(v){
+
+            const row =
+                document.createElement("tr");
+
+            row.innerHTML=`
+
+                <td>${v.id}</td>
+
+                <td>${v.page}</td>
+
+                <td>${v.session_id}</td>
+
+                <td>
+                    ${new Date(v.visited_at)
+                        .toLocaleString()}
+                </td>
+
+            `;
+
+            table.appendChild(row);
+
+        });
+
+    }catch(error){
+
+        console.log(error);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
