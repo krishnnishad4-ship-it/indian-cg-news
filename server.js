@@ -1,5 +1,4 @@
 const express = require("express");
-const { createClient } = require("@supabase/supabase-js");
 
 const app = express();
 
@@ -12,11 +11,6 @@ app.use(express.static(__dirname));
 
 const API_KEY = process.env.GNEWS_API_KEY;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "123456";
-
-const supabase = createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_KEY
-);
 
 
 // ===============================
@@ -87,6 +81,7 @@ app.get("/api/search", async (req, res) => {
         const query = req.query.q;
 
         if (!query) {
+
             return res.json({
                 articles: []
             });
@@ -131,59 +126,6 @@ app.get("/api/search", async (req, res) => {
 
 
 // ===============================
-// VISITOR TRACKING
-// ===============================
-
-app.post("/api/track", async (req, res) => {
-
-    try {
-
-        const { page, session_id } = req.body;
-
-        if (!page || !session_id) {
-
-            return res.status(400).json({
-                error: "Missing tracking data"
-            });
-        }
-
-        const { data, error } = await supabase
-            .from("visits")
-            .insert([
-                {
-                    page: page,
-                    session_id: session_id
-                }
-            ])
-            .select();
-
-        if (error) {
-
-            console.log("SUPABASE ERROR:", error);
-
-            return res.status(500).json({
-                error: "Visit save nahi hui"
-            });
-        }
-
-        console.log("Visit Saved:", data);
-
-        res.json({
-            success: true
-        });
-
-    } catch (error) {
-
-        console.log("TRACKING ERROR:", error);
-
-        res.status(500).json({
-            error: "Tracking error"
-        });
-    }
-});
-
-
-// ===============================
 // ADMIN LOGIN
 // ===============================
 
@@ -202,55 +144,6 @@ app.post("/api/admin-login", (req, res) => {
         success: false,
         error: "Wrong password"
     });
-});
-
-
-// ===============================
-// ADMIN DATA
-// ===============================
-
-app.get("/api/admin-data", async (req, res) => {
-
-    try {
-
-        const adminPassword =
-            req.headers["x-admin-password"];
-
-        if (adminPassword !== ADMIN_PASSWORD) {
-
-            return res.status(401).json({
-                error: "Unauthorized"
-            });
-        }
-
-        const { data, error } = await supabase
-            .from("visits")
-            .select("id, page, session_id, visited_at")
-            .order("visited_at", {
-                ascending: false
-            });
-
-        if (error) {
-
-            console.log("ADMIN DATA ERROR:", error);
-
-            return res.status(500).json({
-                error: "Admin data load nahi hui"
-            });
-        }
-
-        res.json({
-            visits: data || []
-        });
-
-    } catch (error) {
-
-        console.log("ADMIN ERROR:", error);
-
-        res.status(500).json({
-            error: "Admin error"
-        });
-    }
 });
 
 
